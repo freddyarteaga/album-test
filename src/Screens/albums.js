@@ -9,7 +9,7 @@ class Albums extends Component {
         static navigationOptions = {
             title: 'Metallica Albums',
             headerStyle: { backgroundColor: '#D3D3D3' },
-            headerTitleStyle: { marginLeft: 70 },
+            headerTitleStyle: { marginLeft: 45 },
         };
    
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity  } from 'react-native';
 import firebase from 'firebase';
 import { Spinner, CardSection, Card, Button } from '../components/common';
 import LoginForm from '../components/LoginForm';
@@ -11,7 +11,7 @@ class Login extends Component {
   static navigationOptions = {
     title: 'Metallica Home',
     headerStyle: { backgroundColor: '#D3D3D3' },
-    headerTitleStyle: { marginLeft: 140 },
+    headerTitleStyle: { marginLeft: 105 },
     
 };
 
@@ -45,15 +45,7 @@ state = { loggedIn: null };
       case true:
         return (  
           <Card style={{ height: 900 }}>
-                 
-              <CardSection>
-                <View onPress={() => navigate('Albums')}>
-                <Image
-                  style={styles.imageStyle} 
-                  source={{ uri: 'https://i1.wp.com/www.metalinjection.net/wp-content/uploads/2014/12/Metallica-disography.jpg?fit=700%2C700' }}
-                />
-                </View>  
-              </CardSection>
+              
               <CardSection>
                 <Button onPress={() => navigate('Albums')}>        
                    ALBUMS
@@ -64,10 +56,10 @@ state = { loggedIn: null };
                    CONCERT LIST
                 </Button>
               </CardSection>           
-              <View style={{ marginTop: 100 }}>
+              <View style={{ marginTop: 300 }}>
               <CardSection >
                 <Button onPress={() => firebase.auth().signOut()} >        
-                   <Text>Log Out</Text>
+                   <Text style={{ color: 'red' }}>Log Out</Text>
                 </Button>
               </CardSection>
               </View>
@@ -93,8 +85,8 @@ state = { loggedIn: null };
 const styles = StyleSheet.create({
   imageStyle: {
       height: 400,
-      flex: 1,
-      width: null
+      width: 400,
+      flex: 1
   }
 });
 

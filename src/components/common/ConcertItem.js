@@ -17,7 +17,7 @@ const ConcertItem = (props) => {
               </View>
               <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                   <View>
-                      <Text>Sold Out</Text>
+                      <Text style={{ color: 'red' }}>Sold Out</Text>
                   </View>
               </View>
           </View>

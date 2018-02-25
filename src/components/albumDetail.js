@@ -26,7 +26,6 @@ const AlbumDetail = ({ album }) => {
                 <Image
                     style={styles.imageStyle} 
                     source={{ uri: image }}
-                    // onPress={() => navigate('Info', { name: 'Jane' })}
                 />
             </CardSection>
 

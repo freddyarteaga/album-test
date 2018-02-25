@@ -7,8 +7,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 class Info extends Component {
 
     static navigationOptions = {
-        title: 'History',
-        headerTitleStyle: { marginLeft: 125 }
+        title: 'History'
     };
 
     render() {
